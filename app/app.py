@@ -1,23 +1,27 @@
 import sys
 import os
-
-# Add the src directory to the Python path
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
-
 import torch
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+
+# Add the src directory to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
+
 from predict import predict, LSTMModel
 
 # Load data
-data = pd.read_csv(os.path.join(os.path.dirname(__file__), "..", "processed_data.csv"))
+data_path = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "processed_data.csv")
+)
+data = pd.read_csv(data_path)
 
 # Load model
-model = LSTMModel(input_size=1, hidden_layer_size=100, output_size=1)
-model.load_state_dict(
-    torch.load(os.path.join(os.path.dirname(__file__), "..", "lstm_model.pth"))
+model_path = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "lstm_model.pth")
 )
+model = LSTMModel(input_size=1, hidden_layer_size=100, output_size=1)
+model.load_state_dict(torch.load(model_path))
 model.eval()
 
 # Make predictions
