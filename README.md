@@ -21,5 +21,6 @@ Ten projekt prognozuje przyszłe ceny produktów rolnych na podstawie danych his
    ```
 
 ## Uruchomienie skryptu
-
+```sh
 python load.py
+```
