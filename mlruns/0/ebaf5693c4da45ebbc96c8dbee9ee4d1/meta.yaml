@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/ebaf5693c4da45ebbc96c8dbee9ee4d1/artifacts
+end_time: 1719383621775
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ebaf5693c4da45ebbc96c8dbee9ee4d1
+run_name: melodic-wasp-610
+run_uuid: ebaf5693c4da45ebbc96c8dbee9ee4d1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383613216
+status: 3
+tags: []
+user_id: kendz

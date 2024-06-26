@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/40e9ea7a928843c3a8c768f3c01248c3/artifacts
+end_time: 1719383596313
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 40e9ea7a928843c3a8c768f3c01248c3
+run_name: spiffy-frog-168
+run_uuid: 40e9ea7a928843c3a8c768f3c01248c3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383586293
+status: 3
+tags: []
+user_id: kendz

@@ -7,6 +7,7 @@ import os
 import time
 import mlflow
 import mlflow.pytorch
+import matplotlib.pyplot as plt
 
 # Wczytanie danych
 data = pd.read_csv("data/ProductPriceIndex.csv")
@@ -127,7 +128,8 @@ for product in products:
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
     # Start MLflow run
-    with mlflow.start_run():
+    with mlflow.start_run() as run:
+        mlflow.log_param("product", product)
         mlflow.log_param("epochs", 5)
         mlflow.log_param("learning_rate", 0.001)
         mlflow.log_param("train_window", train_window)
@@ -159,6 +161,11 @@ for product in products:
 
         # Zapisanie modelu
         mlflow.pytorch.log_model(model, "model")
+
+        # Logowanie zestawu danych
+        train_data_file = f"train_data_{product}.csv"
+        train_data.to_csv(train_data_file, index=False)
+        mlflow.log_artifact(train_data_file)
 
     # Prognozowanie przyszłych wartości
     model.eval()
@@ -199,6 +206,8 @@ for product in products:
             "prognozowana_cena_gospodarstwa": future_predictions_dollars,
         }
     )
-    forecast_df.to_csv(f"forecast_data/forecast_{product}.csv", index=False)
+    forecast_file = f"forecast_{product}.csv"
+    forecast_df.to_csv(forecast_file, index=False)
+    mlflow.log_artifact(forecast_file)
 
-    print(f"Prognozy zapisane do pliku: forecast_data/forecast_{product}.csv")
+    print(f"Prognozy zapisane do pliku: {forecast_file}")

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/2b91111ad1a6446f84404771e4101719/artifacts
+end_time: 1719383543451
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2b91111ad1a6446f84404771e4101719
+run_name: treasured-cub-891
+run_uuid: 2b91111ad1a6446f84404771e4101719
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383532676
+status: 3
+tags: []
+user_id: kendz

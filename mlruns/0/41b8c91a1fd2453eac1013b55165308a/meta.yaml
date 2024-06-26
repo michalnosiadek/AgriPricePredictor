@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/41b8c91a1fd2453eac1013b55165308a/artifacts
+end_time: 1719383576413
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 41b8c91a1fd2453eac1013b55165308a
+run_name: marvelous-owl-475
+run_uuid: 41b8c91a1fd2453eac1013b55165308a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383565739
+status: 3
+tags: []
+user_id: kendz

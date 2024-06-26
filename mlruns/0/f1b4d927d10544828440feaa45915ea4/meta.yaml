@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/f1b4d927d10544828440feaa45915ea4/artifacts
+end_time: 1719383683474
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f1b4d927d10544828440feaa45915ea4
+run_name: blushing-lynx-599
+run_uuid: f1b4d927d10544828440feaa45915ea4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383677572
+status: 3
+tags: []
+user_id: kendz

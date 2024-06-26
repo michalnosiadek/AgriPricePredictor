@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/976f49c99a6b47d2b640c0f9805db22b/artifacts
+end_time: 1719383586241
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 976f49c99a6b47d2b640c0f9805db22b
+run_name: thundering-mare-591
+run_uuid: 976f49c99a6b47d2b640c0f9805db22b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383576468
+status: 3
+tags: []
+user_id: kendz

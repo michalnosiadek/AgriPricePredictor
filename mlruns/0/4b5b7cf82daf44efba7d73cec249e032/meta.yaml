@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/4b5b7cf82daf44efba7d73cec249e032/artifacts
+end_time: 1719383651172
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4b5b7cf82daf44efba7d73cec249e032
+run_name: capable-auk-411
+run_uuid: 4b5b7cf82daf44efba7d73cec249e032
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383645605
+status: 3
+tags: []
+user_id: kendz

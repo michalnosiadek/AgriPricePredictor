@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/e5898e3eb3914504b95c620140c8b6e3/artifacts
+end_time: 1719383671417
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e5898e3eb3914504b95c620140c8b6e3
+run_name: magnificent-fowl-635
+run_uuid: e5898e3eb3914504b95c620140c8b6e3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383665851
+status: 3
+tags: []
+user_id: kendz

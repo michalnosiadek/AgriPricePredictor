@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/b6ab5c998350409ca48247287916d672/artifacts
+end_time: 1719383502377
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b6ab5c998350409ca48247287916d672
+run_name: handsome-hen-651
+run_uuid: b6ab5c998350409ca48247287916d672
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383489187
+status: 3
+tags: []
+user_id: kendz

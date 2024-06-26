@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/bb0342931d9a457fb98bdf42a1e55ece/artifacts
+end_time: 1719383522660
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bb0342931d9a457fb98bdf42a1e55ece
+run_name: gentle-eel-210
+run_uuid: bb0342931d9a457fb98bdf42a1e55ece
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383512237
+status: 3
+tags: []
+user_id: kendz
