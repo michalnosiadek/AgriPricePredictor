@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/d4f5778ffa344728989fd4a1fb4c5d4d/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d4f5778ffa344728989fd4a1fb4c5d4d
+run_name: invincible-crow-729
+run_uuid: d4f5778ffa344728989fd4a1fb4c5d4d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383344980
+status: 1
+tags: []
+user_id: kendz

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/33e7fcb3e34e4768904b7fa005eb3add/artifacts
+end_time: 1719383334545
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 33e7fcb3e34e4768904b7fa005eb3add
+run_name: worried-ape-707
+run_uuid: 33e7fcb3e34e4768904b7fa005eb3add
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383322755
+status: 3
+tags: []
+user_id: kendz

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Workspaces/AgriPricePredictor/mlruns/0/5b2122cade484ba0b2a9382fcf092789/artifacts
+end_time: 1719383310866
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5b2122cade484ba0b2a9382fcf092789
+run_name: fortunate-dove-180
+run_uuid: 5b2122cade484ba0b2a9382fcf092789
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719383298135
+status: 3
+tags: []
+user_id: kendz

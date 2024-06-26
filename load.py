@@ -5,6 +5,8 @@ import torch
 import torch.nn as nn
 import os
 import time
+import mlflow
+import mlflow.pytorch
 
 # Wczytanie danych
 data = pd.read_csv("data/ProductPriceIndex.csv")
@@ -37,7 +39,7 @@ for column in [
     "cena_detaliczna_nowy_jork",
 ]:
     data[column] = (
-        data[column].replace("[\$,]", "", regex=True).replace("", np.nan).astype(float)
+        data[column].replace("[\\$,]", "", regex=True).replace("", np.nan).astype(float)
     )
 
 # Lista unikalnych produktów
@@ -124,28 +126,39 @@ for product in products:
     loss_function = nn.MSELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-    # Trening modelu
-    epochs = 5  # Zmniejszenie liczby epok
-    for epoch in range(epochs):
-        start_time = time.time()
-        for seq, labels in train_inout_seq:
-            optimizer.zero_grad()
-            model.hidden_cell = (
-                torch.zeros(1, 1, model.hidden_layer_size),
-                torch.zeros(1, 1, model.hidden_layer_size),
-            )
+    # Start MLflow run
+    with mlflow.start_run():
+        mlflow.log_param("epochs", 5)
+        mlflow.log_param("learning_rate", 0.001)
+        mlflow.log_param("train_window", train_window)
 
-            y_pred = model(torch.FloatTensor(seq))
+        # Trening modelu
+        epochs = 5  # Zmniejszenie liczby epok
+        for epoch in range(epochs):
+            start_time = time.time()
+            total_loss = 0
+            for seq, labels in train_inout_seq:
+                optimizer.zero_grad()
+                model.hidden_cell = (
+                    torch.zeros(1, 1, model.hidden_layer_size),
+                    torch.zeros(1, 1, model.hidden_layer_size),
+                )
 
-            single_loss = loss_function(y_pred, torch.FloatTensor(labels))
-            single_loss.backward()
-            optimizer.step()
+                y_pred = model(torch.FloatTensor(seq))
 
-        end_time = time.time()
-        epoch_time = end_time - start_time
-        print(
-            f"epoch: {epoch+1} loss: {single_loss.item():10.8f} time: {epoch_time:.2f} sec"
-        )
+                single_loss = loss_function(y_pred, torch.FloatTensor(labels))
+                single_loss.backward()
+                optimizer.step()
+                total_loss += single_loss.item()
+
+            avg_loss = total_loss / len(train_inout_seq)
+            end_time = time.time()
+            epoch_time = end_time - start_time
+            print(f"epoch: {epoch+1} loss: {avg_loss:10.8f} time: {epoch_time:.2f} sec")
+            mlflow.log_metric("loss", avg_loss, step=epoch)
+
+        # Zapisanie modelu
+        mlflow.pytorch.log_model(model, "model")
 
     # Prognozowanie przyszłych wartości
     model.eval()
